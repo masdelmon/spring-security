@@ -21,12 +21,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			throws Exception {
 
 		// in-memory authentication
-		// auth.inMemoryAuthentication().withUser("pankaj").password("pankaj123").roles("USER");
+		auth.inMemoryAuthentication().withUser("pankaj").password("pankaj123").roles("USER");
 
 		// using custom UserDetailsService DAO
 		// auth.userDetailsService(new AppUserDetailsServiceDAO());
 
 		// using JDBC
+		
 		Context ctx = new InitialContext();
 		DataSource ds = (DataSource) ctx
 				.lookup("java:/comp/env/jdbc/MyLocalDB");
