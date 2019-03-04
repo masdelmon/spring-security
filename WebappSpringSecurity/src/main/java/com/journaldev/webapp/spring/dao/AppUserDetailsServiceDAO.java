@@ -21,7 +21,7 @@ public class AppUserDetailsServiceDAO implements UserDetailsService {
 		
 		logger.info("loadUserByUsername username="+username);
 		
-		if(!username.equals("pankaj")){
+		if(!username.equals("masdelmon")){
 			throw new UsernameNotFoundException(username + " not found");
 		}
 		
@@ -57,7 +57,7 @@ public class AppUserDetailsServiceDAO implements UserDetailsService {
 			
 			@Override
 			public String getPassword() {
-				return "pankaj123";
+				return "masdelmon";
 			}
 			
 			@Override
