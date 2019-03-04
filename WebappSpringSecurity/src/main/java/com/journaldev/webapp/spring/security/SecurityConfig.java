@@ -29,18 +29,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// using JDBC
 		
 		
-		Context ctx = new InitialContext();
-		DataSource ds = (DataSource) ctx
-				.lookup("java:/comp/env/jdbc/MyLocalDB");
-
-		final String findUserQuery = "select username,password,enabled "
-				+ "from Employees " + "where username = ?";
-		final String findRoles = "select username,role " + "from Roles "
-				+ "where username = ?";
 		
-		auth.jdbcAuthentication().dataSource(ds)
-				.usersByUsernameQuery(findUserQuery)
-				.authoritiesByUsernameQuery(findRoles);
+		
+		
 	}
 	
 	@Override
